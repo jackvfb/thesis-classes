@@ -1,0 +1,15 @@
+project:
+  title: "thesis-classes"
+  output-dir: "docs"
+format:
+  html:
+    echo: false
+    toc: true
+  docx: 
+    echo: false
+    toc: false
+  
+
+
+
+

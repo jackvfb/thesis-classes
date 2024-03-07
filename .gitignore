@@ -1,0 +1,10 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+/docs/
+/index_cache/
+/index_files/
+/.quarto/
+*.Rproj
