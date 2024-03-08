@@ -18,6 +18,20 @@ library(knitr)
 
 ## NBHF Classes
 
+```{r}
+#| label: tbl-ndets
+#| tbl-cap: "Size of each class, represented by number of distinct detections and number of events over which the detections occurred, for each species class in the training set."
+#| 
+matrix(data = c(sapply(train, nDetections, distinct=TRUE),
+                sapply(train, \(x) length(events(x)))),
+       nrow=3,
+       ncol=2,
+       dimnames = list(c("*Kogia*", "Dall's porpoise",
+                         "harbor porpoise"),
+                       c("detections","events"))) %>%
+  kable()
+```
+
 ### Results
 
 I can add some general remarks here about broad differences in @fig-avgspec the shapes of the different profiles and what features led us to select them as high-quality clicks. *Kogia* in @fig-avgspec-ks, Dall's in @fig-avgspec-pd, and harbor in @fig-avgspec-pp.
